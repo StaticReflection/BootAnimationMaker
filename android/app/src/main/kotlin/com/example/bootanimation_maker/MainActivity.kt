@@ -1,4 +1,4 @@
-package com.example.bootanimation_maker
+package com.staticreflection.bootanimation_maker
 
 import io.flutter.embedding.android.FlutterActivity
 

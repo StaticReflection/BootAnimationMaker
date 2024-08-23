@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="bootanimation_maker"
+        android:label="BootAnimation Maker"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
