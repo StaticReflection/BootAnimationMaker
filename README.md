@@ -1,0 +1,3 @@
+# BootAnimationMaker
+
+由Flutter编写的Magisk开机动画模块生成器
