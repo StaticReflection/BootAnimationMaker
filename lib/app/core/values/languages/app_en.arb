@@ -1,4 +1,7 @@
 {
   "@@locale": "en",
-  "magiskModuleProperties": "Magisk module properties"
+  "magiskModuleProperties": "Magisk module properties",
+  "selectFile": "Select file",
+  "type": "Type",
+  "video": "Video"
 }

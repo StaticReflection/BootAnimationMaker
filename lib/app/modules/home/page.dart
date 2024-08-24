@@ -1,3 +1,4 @@
+import 'package:bootanimation_maker/app/modules/home/widgets/bootanimation_type.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,9 +16,11 @@ class HomePage extends GetView<HomePageController> {
       body: const Padding(
         padding: EdgeInsets.only(left: 12, right: 12),
         child: SingleChildScrollView(
-          child: Column(
+          child: Wrap(
+            runSpacing: 12.0,
             children: [
               MagiskModulePropertiesWidget(),
+              BootAnimationTypeWidget(),
             ],
           ),
         ),

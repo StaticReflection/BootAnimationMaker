@@ -1,4 +1,7 @@
 {
   "@@locale": "zh",
-  "magiskModuleProperties": "Magisk模块属性"
+  "magiskModuleProperties": "Magisk模块属性",
+  "selectFile": "选择文件",
+  "type": "类型",
+  "video": "视频"
 }
