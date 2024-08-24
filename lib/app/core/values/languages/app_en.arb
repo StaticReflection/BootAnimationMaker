@@ -1,7 +1,15 @@
 {
   "@@locale": "en",
+  "author": "Author",
+  "description": "Description",
   "magiskModuleProperties": "Magisk module properties",
+  "moduleID": "Module ID",
+  "moduleName": "Module name",
+  "optional": "Optional",
   "selectFile": "Select file",
   "type": "Type",
+  "updateJson": "Update json",
+  "version": "Version",
+  "versionCode": "Version code",
   "video": "Video"
 }

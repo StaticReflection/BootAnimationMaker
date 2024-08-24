@@ -21,47 +21,59 @@ class MagiskModulePropertiesWidget extends GetView<HomePageController> {
               runSpacing: 12.0,
               children: [
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'id'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.moduleID} <id>'),
                   onChanged: (value) =>
                       controller.magiskModuleProperties.id = value,
                 ),
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'name'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.moduleName} <name>'),
                   onChanged: (value) =>
                       controller.magiskModuleProperties.name = value,
                 ),
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'version'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.version} <version>'),
                   onChanged: (value) =>
                       controller.magiskModuleProperties.version = value,
                 ),
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'versionCode'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.versionCode} <versionCode>'),
                   keyboardType: TextInputType.number,
                   onChanged: (value) => controller.magiskModuleProperties
                       .versionCode = int.tryParse(value) ?? 0,
                 ),
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'author'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.author} <author>'),
                   onChanged: (value) =>
                       controller.magiskModuleProperties.author = value,
                 ),
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'description (optional)'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.description} <description> (${AppLocalizations.of(context)!.optional})'),
                   onChanged: (value) =>
                       controller.magiskModuleProperties.description = value,
                 ),
                 TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'updateJson (optional)'),
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText:
+                          '${AppLocalizations.of(context)!.updateJson} <updateJson> (${AppLocalizations.of(context)!.optional})'),
                   onChanged: (value) =>
                       controller.magiskModuleProperties.updateJson = value,
                 ),
