@@ -1,9 +1,11 @@
 {
   "@@locale": "zh",
+  "animationGeneration": "动画生成",
   "author": "作者",
   "description": "描述",
   "magiskModuleProperties": "Magisk模块属性",
   "moduleID": "模块ID",
+  "moduleMaker": "模块制作",
   "moduleName": "模块名称",
   "optional": "可选",
   "selectFile": "选择文件",

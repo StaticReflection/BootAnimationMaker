@@ -1,9 +1,11 @@
 {
   "@@locale": "en",
+  "animationGeneration": "Animation generation",
   "author": "Author",
   "description": "Description",
   "magiskModuleProperties": "Magisk module properties",
   "moduleID": "Module ID",
+  "moduleMaker": "Module maker",
   "moduleName": "Module name",
   "optional": "Optional",
   "selectFile": "Select file",

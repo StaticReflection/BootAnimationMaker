@@ -1,10 +1,10 @@
 import 'package:bootanimation_maker/app/data/enums/bootanimation_type.dart';
+import 'package:bootanimation_maker/app/modules/home/pages/magisk_module/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:bootanimation_maker/app/modules/home/controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class BootAnimationTypeWidget extends GetView<HomePageController> {
+class BootAnimationTypeWidget extends GetView<MagiskModuleController> {
   const BootAnimationTypeWidget({super.key});
 
   @override
@@ -19,7 +19,7 @@ class BootAnimationTypeWidget extends GetView<HomePageController> {
                   value: controller.bootanimationType.value,
                   items: [
                     DropdownMenuItem(
-                        value: BootanimationTypeEnum.video,
+                        value: BootAnimationTypeEnum.video,
                         child: Text(AppLocalizations.of(context)!.video)),
                   ],
                   onChanged: (value) =>

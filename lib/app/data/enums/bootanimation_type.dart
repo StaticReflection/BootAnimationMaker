@@ -1,4 +1,4 @@
-enum BootanimationTypeEnum {
+enum BootAnimationTypeEnum {
   video([
     'mp4',
     'avi',
@@ -15,5 +15,5 @@ enum BootanimationTypeEnum {
 
   final List<String> fileType;
 
-  const BootanimationTypeEnum(this.fileType);
+  const BootAnimationTypeEnum(this.fileType);
 }
