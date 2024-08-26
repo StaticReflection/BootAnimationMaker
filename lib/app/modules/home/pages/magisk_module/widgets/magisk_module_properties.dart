@@ -15,8 +15,9 @@ class MagiskModulePropertiesWidget extends GetView<MagiskModuleController> {
           ListTile(
             title: Text(AppLocalizations.of(context)!.magiskModuleProperties),
           ),
+          const Divider(height: 1),
           Padding(
-            padding: const EdgeInsets.only(left: 12, right: 12),
+            padding: const EdgeInsets.only(left: 12, right: 12, top: 12),
             child: Wrap(
               runSpacing: 12.0,
               children: [

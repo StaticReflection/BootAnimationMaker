@@ -24,6 +24,7 @@ class BootAnimationTypeWidget extends GetView<BootAnimationController> {
                   ],
                   onChanged: (value) =>
                       controller.bootAnimationType.value = value!))),
+          const Divider(height: 1),
           Obx(
             () => ListTile(
               title: Text(AppLocalizations.of(context)!.selectFile),
