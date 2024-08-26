@@ -28,9 +28,9 @@ class BootAnimationTypeWidget extends GetView<BootAnimationController> {
           Obx(
             () => ListTile(
               title: Text(AppLocalizations.of(context)!.selectFile),
-              subtitle: controller.fileName.value == ''
+              subtitle: controller.fileNameList.value == ''
                   ? null
-                  : Text(controller.fileName.value),
+                  : Text(controller.fileNameList.value),
               trailing: const Icon(Icons.arrow_forward),
               onTap: () => controller.selectFile(),
             ),

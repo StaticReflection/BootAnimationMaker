@@ -4,18 +4,24 @@ import 'package:get/get.dart';
 
 class BootAnimationController extends GetxController {
   Rx<BootAnimationTypeEnum> bootAnimationType = BootAnimationTypeEnum.video.obs;
-  RxString fileName = ''.obs;
-  String? filePath;
+  RxString fileNameList = ''.obs;
+  List<String> filePathList = [];
 
   void selectFile() {
     FilePicker.platform
         .pickFiles(
-            type: FileType.custom,
-            allowedExtensions: bootAnimationType.value.fileType)
+      type: FileType.custom,
+      allowedExtensions: bootAnimationType.value.fileType,
+      allowMultiple: true,
+    )
         .then((result) {
       if (result != null) {
-        filePath = result.files.single.path!;
-        fileName.value = result.files.single.name;
+        filePathList = result.paths.map((path) => path!).toList();
+        fileNameList.value = result.names
+            .map((name) => name!)
+            .toList()
+            .toString()
+            .replaceAll(RegExp(r'[\[\]]'), '');
       }
     });
   }
