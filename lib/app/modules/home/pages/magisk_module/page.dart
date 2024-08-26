@@ -1,4 +1,4 @@
-import 'package:bootanimation_maker/app/modules/home/pages/magisk_module/widgets/bootanimation_type.dart';
+import 'package:bootanimation_maker/app/modules/home/pages/magisk_module/widgets/magisk_module_properties.dart';
 import 'package:flutter/material.dart';
 
 class MagiskModulePage extends StatelessWidget {
@@ -6,6 +6,6 @@ class MagiskModulePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BootAnimationTypeWidget();
+    return const MagiskModulePropertiesWidget();
   }
 }

@@ -1,11 +1,12 @@
-import 'package:bootanimation_maker/app/modules/home/pages/boot_animation/page.dart';
-import 'package:bootanimation_maker/app/modules/home/pages/magisk_module/widgets/bootanimation_type.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:bootanimation_maker/app/core/values/constants/app_info.dart';
 import 'package:bootanimation_maker/app/modules/home/controller.dart';
+
+import 'package:bootanimation_maker/app/modules/home/pages/boot_animation/page.dart';
+import 'package:bootanimation_maker/app/modules/home/pages/magisk_module/page.dart';
 
 class HomePage extends GetView<HomePageController> {
   const HomePage({super.key});
@@ -20,8 +21,8 @@ class HomePage extends GetView<HomePageController> {
               child: Obx(() => IndexedStack(
                     index: controller.index.value,
                     children: const [
-                      BootAnimationTypeWidget(),
                       BootAnimationPage(),
+                      MagiskModulePage(),
                     ],
                   )))),
       bottomNavigationBar: Obx(() => NavigationBar(
