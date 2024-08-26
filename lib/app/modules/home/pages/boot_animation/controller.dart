@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class BootAnimationController extends GetxController {
   Rx<BootAnimationTypeEnum> bootAnimationType = BootAnimationTypeEnum.video.obs;
-  RxString fileNameList = ''.obs;
+  RxList<String> fileNameList = <String>[].obs;
   List<String> filePathList = [];
 
   void selectFile() {
@@ -16,11 +16,7 @@ class BootAnimationController extends GetxController {
         .then((result) {
       if (result != null) {
         filePathList = result.paths.map((path) => path!).toList();
-        fileNameList.value = result.names
-            .map((name) => name!)
-            .toList()
-            .toString()
-            .replaceAll(RegExp(r'[\[\]]'), '');
+        fileNameList.value = result.names.map((name) => name!).toList();
       }
     });
   }
