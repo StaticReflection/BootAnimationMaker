@@ -1,11 +1,11 @@
-import 'package:bootanimation_maker/app/data/enums/bootanimation_type.dart';
+import 'package:bootanimation_maker/app/data/enums/bootanimation_source_type.dart';
 import 'package:bootanimation_maker/app/modules/home/pages/boot_animation/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class BootAnimationTypeWidget extends GetView<BootAnimationController> {
-  const BootAnimationTypeWidget({super.key});
+class BootAnimationSourceTypeWidget extends GetView<BootAnimationController> {
+  const BootAnimationSourceTypeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class BootAnimationTypeWidget extends GetView<BootAnimationController> {
                   value: controller.bootAnimationType.value,
                   items: [
                     DropdownMenuItem(
-                        value: BootAnimationTypeEnum.video,
+                        value: BootAnimationSourceTypeEnum.video,
                         child: Text(AppLocalizations.of(context)!.video)),
                   ],
                   onChanged: (value) =>

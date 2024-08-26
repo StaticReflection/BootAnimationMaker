@@ -17,14 +17,13 @@ class HomePage extends GetView<HomePageController> {
       appBar: AppBar(title: const Text(AppInfoConstant.appName)),
       body: Padding(
           padding: const EdgeInsets.only(left: 12, right: 12),
-          child: SingleChildScrollView(
-              child: Obx(() => IndexedStack(
-                    index: controller.index.value,
-                    children: const [
-                      BootAnimationPage(),
-                      MagiskModulePage(),
-                    ],
-                  )))),
+          child: Obx(() => IndexedStack(
+                index: controller.index.value,
+                children: const [
+                  BootAnimationPage(),
+                  MagiskModulePage(),
+                ],
+              ))),
       bottomNavigationBar: Obx(() => NavigationBar(
             selectedIndex: controller.index.value,
             onDestinationSelected: (value) => controller.index.value = value,

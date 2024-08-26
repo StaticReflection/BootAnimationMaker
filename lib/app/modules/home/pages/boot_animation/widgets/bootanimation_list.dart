@@ -8,21 +8,20 @@ class BootAnimationListWidget extends GetView<BootAnimationController> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 400,
-      child: Obx(() => ReorderableListView.builder(
-          itemCount: controller.fileNameList.length,
-          onReorder: _onReorder,
-          itemBuilder: (context, index) {
-            return Column(
-              key: ValueKey(controller.fileNameList[index]),
-              children: [
-                if (index > 0) const SizedBox(height: 12),
-                BootAnimationItemWidget(controller.fileNameList[index])
-              ],
-            );
-          })),
-    );
+    return Flexible(
+        // height: 1000,
+        child: Obx(() => ReorderableListView.builder(
+            itemCount: controller.fileNameList.length,
+            onReorder: _onReorder,
+            itemBuilder: (context, index) {
+              return Column(
+                key: ValueKey(controller.fileNameList[index]),
+                children: [
+                  if (index > 0) const SizedBox(height: 12),
+                  BootAnimationItemWidget(index)
+                ],
+              );
+            })));
   }
 }
 
