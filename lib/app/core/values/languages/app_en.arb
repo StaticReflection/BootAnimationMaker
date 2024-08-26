@@ -1,8 +1,10 @@
 {
   "@@locale": "en",
+  "animationGeneralParameters": "Animation general parameters",
   "animationGeneration": "Animation generation",
   "author": "Author",
   "description": "Description",
+  "height": "Height",
   "magiskModuleProperties": "Magisk module properties",
   "moduleID": "Module ID",
   "moduleMaker": "Module maker",
@@ -13,5 +15,6 @@
   "updateJson": "Update json",
   "version": "Version",
   "versionCode": "Version code",
-  "video": "Video"
+  "video": "Video",
+  "width": "Width"
 }

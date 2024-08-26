@@ -7,6 +7,10 @@ class BootAnimationController extends GetxController {
   RxList<String> fileNameList = <String>[].obs;
   List<String> filePathList = [];
 
+  RxInt bootAnimationWidth = 0.obs;
+  RxInt bootAnimationHeight = 0.obs;
+  RxInt bootAnimationFPS = 0.obs;
+
   void selectFile() {
     FilePicker.platform
         .pickFiles(

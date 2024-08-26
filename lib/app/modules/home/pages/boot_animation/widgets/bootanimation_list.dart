@@ -1,4 +1,5 @@
 import 'package:bootanimation_maker/app/modules/home/pages/boot_animation/controller.dart';
+import 'package:bootanimation_maker/app/modules/home/pages/boot_animation/widgets/bootanimation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,11 +18,7 @@ class BootAnimationListWidget extends GetView<BootAnimationController> {
               key: ValueKey(controller.fileNameList[index]),
               children: [
                 if (index > 0) const SizedBox(height: 12),
-                Card(
-                    margin: const EdgeInsets.all(0),
-                    child: ListTile(
-                      title: Text(controller.fileNameList[index]),
-                    ))
+                BootAnimationItemWidget(controller.fileNameList[index])
               ],
             );
           })),

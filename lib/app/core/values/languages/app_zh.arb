@@ -1,8 +1,10 @@
 {
   "@@locale": "zh",
+  "animationGeneralParameters": "动画通用参数",
   "animationGeneration": "动画生成",
   "author": "作者",
   "description": "描述",
+  "height": "高度",
   "magiskModuleProperties": "Magisk模块属性",
   "moduleID": "模块ID",
   "moduleMaker": "模块制作",
@@ -13,5 +15,6 @@
   "updateJson": "更新json",
   "version": "版本",
   "versionCode": "版本号",
-  "video": "视频"
+  "video": "视频",
+  "width": "宽度"
 }
