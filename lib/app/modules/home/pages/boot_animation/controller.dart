@@ -10,8 +10,7 @@ class BootAnimationController extends GetxController {
   void selectFile() {
     FilePicker.platform
         .pickFiles(
-      type: FileType.custom,
-      allowedExtensions: bootAnimationType.value.fileType,
+      type: bootAnimationType.value.fileType,
       allowMultiple: true,
     )
         .then((result) {

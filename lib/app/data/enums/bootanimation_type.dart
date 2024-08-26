@@ -1,19 +1,9 @@
-enum BootAnimationTypeEnum {
-  video([
-    'mp4',
-    'avi',
-    'mkv',
-    'mov',
-    'flv',
-    'wmv',
-    'webm',
-    'ts',
-    'ps',
-    '3gp',
-    'ogg',
-  ]);
+import 'package:file_picker/file_picker.dart';
 
-  final List<String> fileType;
+enum BootAnimationTypeEnum {
+  video(FileType.video);
+
+  final FileType fileType;
 
   const BootAnimationTypeEnum(this.fileType);
 }
