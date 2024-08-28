@@ -24,8 +24,9 @@ class BootanimationPropertiiesWidget extends GetView<BootAnimationController> {
                 Expanded(
                     child: TextField(
                         keyboardType: TextInputType.number,
-                        onChanged: (value) => controller.bootAnimationWidth
-                            .value = int.tryParse(value) ?? 0,
+                        onChanged: (value) => controller
+                            .bootAnimationGeneralParameter
+                            .width = int.tryParse(value),
                         decoration: InputDecoration(
                             border: const OutlineInputBorder(),
                             labelText: AppLocalizations.of(context)!.width))),
@@ -33,8 +34,9 @@ class BootanimationPropertiiesWidget extends GetView<BootAnimationController> {
                 Expanded(
                     child: TextField(
                         keyboardType: TextInputType.number,
-                        onChanged: (value) => controller.bootAnimationHeight
-                            .value = int.tryParse(value) ?? 0,
+                        onChanged: (value) => controller
+                            .bootAnimationGeneralParameter
+                            .height = int.tryParse(value) ?? 0,
                         decoration: InputDecoration(
                             border: const OutlineInputBorder(),
                             labelText: AppLocalizations.of(context)!.height))),
@@ -43,7 +45,8 @@ class BootanimationPropertiiesWidget extends GetView<BootAnimationController> {
                     child: TextField(
                         keyboardType: TextInputType.number,
                         onChanged: (value) => controller
-                            .bootAnimationFPS.value = int.tryParse(value) ?? 0,
+                            .bootAnimationGeneralParameter
+                            .fps = int.tryParse(value) ?? 0,
                         decoration: const InputDecoration(
                             border: OutlineInputBorder(), labelText: 'FPS'))),
               ],

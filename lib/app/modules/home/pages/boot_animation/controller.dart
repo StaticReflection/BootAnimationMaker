@@ -1,4 +1,5 @@
 import 'package:bootanimation_maker/app/data/enums/bootanimation_source_type.dart';
+import 'package:bootanimation_maker/app/data/models/bootanimation_general_parameter.dart';
 import 'package:bootanimation_maker/app/data/models/bootanimation_parameter.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:get/get.dart';
@@ -9,10 +10,8 @@ class BootAnimationController extends GetxController {
   RxList<String> fileNameList = <String>[].obs;
   List<String> filePathList = [];
 
-  RxInt bootAnimationWidth = 0.obs;
-  RxInt bootAnimationHeight = 0.obs;
-  RxInt bootAnimationFPS = 0.obs;
-
+  BootAnimationGeneralParameter bootAnimationGeneralParameter =
+      BootAnimationGeneralParameter();
   RxList<BootAnimationParameter> bootAnimationParameter =
       <BootAnimationParameter>[].obs;
 
@@ -30,5 +29,16 @@ class BootAnimationController extends GetxController {
             filePathList.length, (value) => BootAnimationParameter());
       }
     });
+  }
+
+  void generate() {
+    // 未选择文件
+    if (fileNameList.isEmpty) {
+    }
+    // 动画通用参数未填写完整
+    else if (bootAnimationGeneralParameter.width == null ||
+        bootAnimationGeneralParameter.height == null ||
+        bootAnimationGeneralParameter.fps == null) {
+    } else {}
   }
 }
