@@ -10,15 +10,30 @@ class BootAnimationPage extends GetView<BootAnimationController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
-        child: Column(
-      children: [
-        BootAnimationSourceTypeWidget(),
-        SizedBox(height: 12),
-        BootanimationPropertiiesWidget(),
-        SizedBox(height: 12),
-        BootAnimationListWidget(),
-      ],
-    ));
+    // return const Expanded(
+    //     child: Column(
+    //   children: [
+    //     BootAnimationSourceTypeWidget(),
+    //     SizedBox(height: 12),
+    //     BootanimationPropertiiesWidget(),
+    //     SizedBox(height: 12),
+    //     BootAnimationListWidget(),
+    //   ],
+    // ));
+    return Scaffold(
+      body: const Column(
+        children: [
+          BootAnimationSourceTypeWidget(),
+          SizedBox(height: 12),
+          BootanimationPropertiiesWidget(),
+          SizedBox(height: 12),
+          BootAnimationListWidget(),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.arrow_forward),
+      ),
+    );
   }
 }
