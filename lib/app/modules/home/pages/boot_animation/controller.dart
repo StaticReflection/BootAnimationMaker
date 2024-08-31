@@ -1,3 +1,4 @@
+import 'package:bootanimation_maker/app/core/services/bootanimation/generate.dart';
 import 'package:bootanimation_maker/app/data/enums/bootanimation_source_type.dart';
 import 'package:bootanimation_maker/app/data/models/bootanimation_general_parameter.dart';
 import 'package:bootanimation_maker/app/data/models/bootanimation_parameter.dart';
@@ -31,7 +32,7 @@ class BootAnimationController extends GetxController {
     });
   }
 
-  void generate() {
+  void generate() async {
     // 未选择文件
     if (fileNameList.isEmpty) {
     }
@@ -39,6 +40,15 @@ class BootAnimationController extends GetxController {
     else if (bootAnimationGeneralParameter.width == null ||
         bootAnimationGeneralParameter.height == null ||
         bootAnimationGeneralParameter.fps == null) {
-    } else {}
+    } else {
+      BootAnimationGenerateService bootAnimationGenerateService =
+          BootAnimationGenerateService(
+        filePathList,
+        bootAnimationType.value,
+        bootAnimationGeneralParameter,
+        bootAnimationParameter,
+      );
+      bootAnimationGenerateService.generate();
+    }
   }
 }
